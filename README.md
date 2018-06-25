@@ -43,6 +43,7 @@ To use the sample Unity project:
 * Open the file Plugins\Android\AndroidManifest.xml and add the following two lines after the &lt;/application&gt; tag:
 
 &lt;uses-permission android:name="android.permission.CAMERA" /&gt;
+
 &lt;uses-feature android:name="android.hardware.camera" /&gt;
 
 * Hit Build and Run to build the app and execute it into your Focus
