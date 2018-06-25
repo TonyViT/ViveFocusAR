@@ -55,9 +55,9 @@ The main scenes are: PermissionsRequestScene, that is the scene that asks for ca
 
 The core script is ARBackground, contained in ViveFocusAR\Scripts. It is a modification of one of the Vive Wave SDK samples and basically do the following:
 * During startup, creates at runtime a quad in front of the user's eyes. This quad is a bit special because:
-** Thanks to the RenderPerEye shader, it will be rendered differently with both eyes;
-** It has UVs different for each eyes: this is necessary because the Vive Wave returns a texture containing the frame of both cameras side-by-side. This means that when rendering for the left eye, the quad should show the left half of the texture, while for the right eye it should show the right half;
-** It doesn't get rendered in the standard way, but it gets rendered registering to the rendering events of the system and then triggering the rendering explicitly from code. This, together with the shader, makes sure that the quad appears always behind all the other objects of the scene;
+  * Thanks to the RenderPerEye shader, it will be rendered differently with both eyes;
+  * It has UVs different for each eyes: this is necessary because the Vive Wave returns a texture containing the frame of both cameras side-by-side. This means that when rendering for the left eye, the quad should show the left half of the texture, while for the right eye it should show the right half;
+  * It doesn't get rendered in the standard way, but it gets rendered registering to the rendering events of the system and then triggering the rendering explicitly from code. This, together with the shader, makes sure that the quad appears always behind all the other objects of the scene;
 * It requests the Vive Wave system to obtain the texture of the cameras stream. Whenever this stream is available, it receives a texture of the cameras and then renders it;
 
 ## Prerequisites
