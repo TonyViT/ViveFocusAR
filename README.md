@@ -41,9 +41,9 @@ To use the sample Unity project:
 * Set the scene Assets\ViveFocusAR\Scenes\PermissionsRequestScene as the first scene to be built for the app; then set the scene Assets\ViveFocusAR\Scenes\FocusAR_Test as the second one (again you do this in the Build Settings of Unity)
 * Open the Player Settings from the Build Settings Window: in Other Settings -> Identification -> Package Name, specify "com.ntw.ViveFocusAR" (without the quotes)
 * If you want, also set Assets\ViveFocusAR\Textures\Carrot as the Default Icon 
-* Open the file Plugins\Android\AndroidManifest.xml and add the following two lines after the </application> tag:
-   <uses-permission android:name="android.permission.CAMERA" />
-   <uses-feature android:name="android.hardware.camera" />
+* Open the file Plugins\Android\AndroidManifest.xml and add the following two lines after the &lt;/application&gt; tag:
+   &lt;uses-permission android:name="android.permission.CAMERA" /&gt;
+   &lt;uses-feature android:name="android.hardware.camera" /&gt;
 * Hit Build and Run to build the app and execute it into your Focus
 
 ### Understanding the code
