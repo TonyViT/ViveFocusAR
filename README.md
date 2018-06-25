@@ -18,6 +18,7 @@ If you plan to just use the APK to see how AR in the Focus works:
 * Connect your Vive Focus to the USB port of your PC
 * Install the app on your Vive Focus device
 * Launch it from your Vive Focus. You can find it inside the menu Library -> Installed
+* Give the app the rights to access the cameras when requested
 * You should see your camera stream and a little planet floating in the air
 * Point your controller to the planet to see it spinning
 * Point your controller and press the touchpad with your thumb to drag the planet to a new position
@@ -38,12 +39,12 @@ To use the sample Unity project:
 * Open the Build Settings window and switch Unity platform to Android (File -> Build Settings -> tap on Android -> Switch Platform)
 * If you see a pop up by Vive Wave asking you to set some settings, be lazy and select "Accept All"
 * Always in the Build Settings window, change the Build System to Internal
-* Set the scene Assets\ViveFocusAR\Scenes\PermissionsRequestScene as the first scene to be built for the app; then set the scene Assets\ViveFocusAR\Scenes\FocusAR_Test as the second one (again you do this in the Build Settings of Unity)
-* Open the Player Settings from the Build Settings Window: in Other Settings -> Identification -> Package Name, specify "com.ntw.ViveFocusAR" (without the quotes)
-* If you want, also set Assets\ViveFocusAR\Textures\Carrot as the Default Icon 
+* Check that the scene Assets\ViveFocusAR\Scenes\PermissionsRequestScene is the first scene to be built for the app and that the scene Assets\ViveFocusAR\Scenes\FocusAR_Test is the second one (again you do this in the Build Settings of Unity)
 * Open the file Plugins\Android\AndroidManifest.xml and add the following two lines after the &lt;/application&gt; tag:
-   &lt;uses-permission android:name="android.permission.CAMERA" /&gt;
-   &lt;uses-feature android:name="android.hardware.camera" /&gt;
+
+&lt;uses-permission android:name="android.permission.CAMERA" /&gt;
+&lt;uses-feature android:name="android.hardware.camera" /&gt;
+
 * Hit Build and Run to build the app and execute it into your Focus
 
 ### Understanding the code
@@ -68,8 +69,10 @@ This is an experimental project in its first version and so has various problems
 * The camera stream is distorted: undistortion, like the one used in the passthrough, should be applied;
 * The shown stream appears as letterboxed, since it doesn't fill all the field of view of the user: this is because the camera frames have a landscape orientation, while the screen for each eyes is portrait. You can mitigate this issue by increasing the zoom factor in the ARBackground script, but this can lead to bad depth perception (objects appears as zoomed);
 * The program is computational heavy;
+* AR objects don't appear completely fixed in space;
 * There may be issues when the program gets suspended and then resumed;
-* There may be problems when showcasing UI elements in your application.
+* There may be problems when showcasing UI elements in your application;
+* At time of writing, Vive Wave programs don't work with Unity 2018.
 
 ## Authors
 
