@@ -6,8 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/ViveFocusAR/Scenes/PermissionsRequestScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/ViveFocusMR/Scenes/PermissionsRequestScene.unity
+    guid: a18f24415d1826d44b0bb6fc210e261e
   - enabled: 1
-    path: Assets/ViveFocusAR/Scenes/FocusAR_Test.unity
-    guid: 7714dda09f68b0046ab59dd1c5ba46be
+    path: Assets/ViveFocusMR/Scenes/MR Demo.unity
+    guid: 24f2d78c2ed32724a850fce9c12282c2
+  - enabled: 1
+    path: Assets/ViveFocusMR/Scenes/AR Demo.unity
+    guid: d82d7f16ce3ab7546a5fc892617b10da
+  m_configObjects: {}
