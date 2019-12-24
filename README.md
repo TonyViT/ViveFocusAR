@@ -1,7 +1,7 @@
 # ViveFocusAR
 An experiment to offer augmented and mixed reality features on the Vive Focus device.
 
-With this solution you will be able to create augmented and mixed reality applications for the Vive Focus, exploiting the two frontal cameras of the device. 
+With this solution you will be able to create augmented and mixed reality applications for the Vive Focus, exploiting the two frontal cameras of the device. If you want to see something you can produce with it, check out [this cool Predator-vision video that I shot from my Vive Focus Plus on Youtube](https://www.youtube.com/watch?v=vUt7efTdwXw&feature=share)!
 
 The solution is experimental, but it is a good start for experimenting with MR apps on the Focus.
 
